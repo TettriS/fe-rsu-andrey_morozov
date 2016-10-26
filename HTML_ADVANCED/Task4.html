@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="TASK 4" content="TASK 4">
+    <title>TASK 4</title>
+</head>
+<body>
+    <h1>The Form</h1>
+    <form name="registration" action="http://httpbin.org/get" method="get">
+		<fieldset>
+			<legend>Personal data</legend>
+			<table>
+				<tr>
+					<td><label for="idFirstName">First Name</label></td>
+					<td><input id="idFirstName" type="text" name="firstname" required autofocus></td>
+				</tr>
+				<tr>
+					<td><label for="idMiddlename">Middle Name</label></td>
+					<td><input id="idMiddlename" type="text" name="middlename"></td>
+				</tr>
+				<tr>
+					<td><label for="idSurname">Surname</label></td>
+					<td><input id="idSurname" type="text" name="surname" required></td>
+				</tr>
+				<tr>
+					<td rowspan="2">Sex</td>
+					<td>
+						<label><input type="radio" name="sex" value="male" checked>Male</label>
+					</td>
+				</tr>
+				<tr>
+					<td> <label><input type="radio" name="sex" value="female">Female</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="idAge">Age</label></td>
+					<td><input id="idAge" type="number" name="number" value="18" min="18" max="101" required></td>
+				</tr>
+				<tr>
+					<td><label for="idCountry">Country</label></td>
+					<td>
+						<input list="Country" name="country" id="idCountry" required>
+						<datalist id="Country">
+							<option value="Brazil">
+							<option value="Germany">
+							<option value="Italy">
+							<option value="Netherlands">
+							<option value="Russia">
+							<option value="Spain">
+						</datalist>
+					</td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td>
+						<label><input type="checkbox" name="city[]" value="Ryazan">Ryazan</label>
+						<label><input type="checkbox" name="city[]" value="Moscow">Moscow</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Photography</td>
+					<td><input type="file" name="filename" accept="image/*"></td>
+				</tr>
+			</table>
+			<hr>
+			<table>
+				<tr>
+					<td>Title</td>
+					<td>
+						<select name="specialty[]" size="8" multiple>
+					<optgroup label="Techologies">
+						<option value="webmaster">Web Master</option>
+						<option value="databaseadm">Database Administrator</option>
+						<option value="computerdesign">Computer-aided design</option>
+					</optgroup>
+					<optgroup label="Finanse">
+						<option value="economicplanning">Economic Planning</option>
+						<option value="management">Management accounting</option>
+						<option value="budgeting">Budgeting and planing</option>
+					</optgroup>
+				</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="idSalary">Salary</label></td>
+					<td><input type="range" name="salary" id="idSalary" value="1" min="0" max="1.5" step="0.1"></td>
+				</tr>
+			</table>
+			<p><textarea name="about" rows="10" cols="45" placeholder="Tell us about yourself..."></textarea></p>
+		</fieldset>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <table>
+                <tr>
+                    <td><label for="idSite">Site</label></td>
+                    <td><input id="idSite" type="url" name="site"></td>
+                </tr>
+                <tr>
+                    <td><label for="idEmail">Email</label></td>
+                    <td><input id="idEmail" type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="idPhone">Phone</label></td>
+                    <td><input id="idPhone" type="tel" name="phone" required></td>
+                </tr>
+            </table>
+        </fieldset>
+        <p>
+			<label>Password <input type="password" name="password" required></label>
+		</p>
+        <hr>
+        <p>
+			<input type="submit" value="Отправить">
+            <input type="reset" value="Сбросить">
+        </p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="TASK 1" content="TASK 1">
+    <title>TASK 1</title>
+</head>
+<body>
+    <h1>TASK 1</h1>
+    <ul>
+        <li><a href="https://www.google.com/">Searching</a></li>
+        <li><a href="https://www.youtube.com/">YouTube</a></li>
+        <li><a href="https://www.card.com/">Card</a></li>
+        <li><a href="https://play.google.com/store?hl=en">Play</a></li>
+        <li><a href="https://www.ria.ru/">News</a></li>
+        <li><a href="https://www.gmail.com/">Mail</a></li>
+    </ul>
+    <ol start="7">
+        <li>Searching</li>
+        <li>Card</li>
+        <li>Market</li>
+        <li>News</li>
+        <li>Dictionaries</li>
+        <li>Picture</li>
+        <li>Yet
+            <ul>
+                <li>Flights</li>
+                <li>Auto</li>
+                <li>Poster</li>
+                <li>Blogs</li>
+            </ul>
+        </li>
+    </ol>
+    <dl>
+        <dt><i>Tag</i></dt>
+        <dd>element of Hypertext Markup Language</dd>
+        <dt><i>The Semantic Web</i></dt>
+        <dd>Thus direction of development of the World Wide Web, the aum of which is to provide information in a form suitable for machine processing</dd>
+    </dl>
+    <hr>
+    <table>
+        <caption>CSS Generated content for pseudo-elements</caption>
+        <thead>
+            <tr>
+                <th>IE</th>
+                <th>Firefox</th>
+                <th>Chrome</th>
+                <th>Safari</th>
+                <th>Opera</th>
+                <th>iOS Safari</th>
+                <th>Opera Mini</th>
+                <th>Andriod Browser</th>
+                <th>Chrome for Android</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2"></td>
+                <td rowspan="4"></td>
+                <td>27</td>
+                <td rowspan="3"></td>
+                <td rowspan="5"></td>
+                <td rowspan="4"></td>
+                <td rowspan="5"></td>
+                <td></td>
+                <td rowspan="5"></td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>2.3</td>
+                <tr>
+                    <td>8</td>
+                    <td>33</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>34</td>
+                    <td>5.1</td>
+                    <td>4.1</td>
+                    <tr>
+                        <td>10</td>
+                        <td>thirty</td>
+                        <td>35</td>
+                        <td>6.1</td>
+                        <td>6.1</td>
+                        <td>4.3</td>
+                    </tr>
+                    <tr>
+                        <td>eleven</td>
+                        <td>31</td>
+                        <td>36</td>
+                        <td>7</td>
+                        <td>23</td>
+                        <td>7.1</td>
+                        <td>7</td>
+                        <td>4.4</td>
+                        <td>36</td>
+                    </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="9">Method of displaying text or images before or after the given element's contents using the before and after pseudo-elements</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    <hr>
+    <form name="userdata" action="http://httpbin.org/post" method="post">
+        <fieldset>
+            <legend>Personal data</legend>
+            <p><label>Surname <input type="text" name="surname"></label></p>
+            <p><label>First name <input type="text" name="firsname"></label></p>
+            <p><label>Middle name <input type="text" name="middlename"></label></p>
+            <p>You are
+                <label><input type="radio" name="sex" value="male" checked>Male</label>
+                <label><input type="radio" name="sex" value="female">Female</label>
+            </p>
+            <p><label>Age <input type="number" name="age" value="18" min="18" max="101"></label></p>
+            <p><label>Country of residence
+                <input list="Country" name="country">
+                    <datalist id="Country">
+                        <option value="Brazil">
+                        <option value="Germany">
+                        <option value="Italy">
+                        <option value="Netherlands">
+                        <option value="Russia">
+                        <option value="Spain">
+                    </datalist>
+                </label></p>
+            <p>City
+                <label><input type="checkbox" name="city[]" value="Ryazan">Ryazan</label>
+                <label><input type="checkbox" name="city[]" value="Moscow">Moscow</label>
+            </p>
+            <p>Photography
+                <input type="file" name="filename" accept="image/*">
+            </p>
+            <hr>
+            <p>
+				<label>Title
+					<select name="specialty[]" size="8" multiple>
+						<optgroup label="Techologies">
+							<option value="webmaster">Web Master</option>
+							<option value="databaseadm">Database Administrator</option>
+							<option value="computerdesign">Computer-aided design</option>
+						</optgroup>
+						<optgroup label="Finanse">
+							<option value="economicplanning">Economic Planning</option>
+							<option value="management">Management accounting</option>
+							<option value="budgeting">Budgeting and planing</option>
+						</optgroup>
+					</select>
+                </label>
+			</p>
+            <p><label>Salary<input type="range" name="salary" value="1" min="0" max="1.5" step="0.1"></label></p>
+            <p><textarea name="about" rows="10" cols="45" placeholder="Tell us about yourself..."></textarea></p>
+        </fieldset>
+        <fieldset>
+            <legend>Contact information</legend>
+            <p><label>Site <input type="url" name="site"></label></p>
+            <p><label>Email <input type="email" name="email"></label></p>
+            <p><label>Phone <input type="tel" name="phone"></label></p>
+        </fieldset>
+        <p><label>Password <input type="password" name="password" required></label></p>
+        <p><input type="submit" value="Отправить"><input type="reset" value="Сбросить"></p>
+    </form>
+</body>
+</html>
