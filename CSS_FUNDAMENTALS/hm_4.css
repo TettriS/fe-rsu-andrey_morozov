@@ -1,0 +1,21 @@
+body {
+    margin-left: 3px;
+}
+div {
+    height: 200px;
+    width: 300px;
+    background: radial-gradient(circle closest-side, #02bc9f 10px, #04bc9f 60px, #ffffff 31px);
+    border: solid 2px #cacaca;
+}
+button {
+    height: 45px;
+    width: 150px;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient( 0deg, #7697dd, #585de7, #8890ca);
+    border: double 3px white;
+    border-radius: 14px;
+    box-shadow: 0 0 5px 4px #c9f0f4;
+    margin-left: 15px;
+    margin-top: 40px;
+}

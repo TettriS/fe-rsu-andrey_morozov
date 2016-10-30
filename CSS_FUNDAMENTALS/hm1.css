@@ -1,0 +1,118 @@
+div:nth-child(1) {
+    font-size: 28px;
+    font-stretch: ultra-condensed;
+    margin-left: 30px;
+    font-style: normal;
+}
+div:nth-child(1):hover {
+    width: 300px;
+}
+div:nth-child(1):hover:before {
+    content: "some ";
+    font-style: italic;
+}
+div:nth-child(1):hover:after {
+    content: " by NobodyRocks";
+    font-style: italic;
+}
+div:nth-child(2) {
+    height: 350px;
+    width: 350px;
+}
+button {
+    font-size: 28px;
+    font-stretch: ultra-condensed;
+}
+.bat {
+    height: 100px;
+    width: 100px;
+    color: #ffffff;
+    background: #3599db;
+    margin: 8px 5px;
+    border: none;
+}
+button:nth-child(1) {
+    transition-property: background, color;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(1):hover {
+    background: rgba(0, 0, 0, 0.0);
+    color: #3599db;
+}
+button:nth-child(2) {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(2):hover {
+    opacity: .0;
+}
+button:nth-child(3) {
+    opacity: 1;
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(3):hover {
+    opacity: .0;
+    transform: scale(1.5);
+}
+button:nth-child(4) {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(4):hover {
+    transform: scale(0.6);
+}
+button:nth-child(5) {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(5):hover {
+    transform: rotate(90deg);
+}
+button:nth-child(6) {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(6):hover {
+    transform: translateY(-30px) scale(1, 0);
+}
+button:nth-child(7) {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(7):hover {
+    transform: scale(0);
+}
+button:nth-child(8) {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(8):hover {
+    transform: scale(1.4, 0);
+}
+button:nth-child(9) {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: .0s;
+}
+button:nth-child(9):hover {
+    transform: skew(45deg, 45deg);
+}
