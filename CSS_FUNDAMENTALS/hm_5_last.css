@@ -1,0 +1,152 @@
+body > div:first-child {
+    height: 100px;
+    width: 100px;
+    font-size: 36px;
+    border: solid chartreuse 30px;
+    border-radius: 25%;
+    animation-name: pageLoader;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    position: relative;
+}
+@keyframes pageLoader {
+    0% {
+        transform: rotate(0deg);
+        background-color: yellow;
+    }
+    25% {
+        border-top: solid chartreuse 30px;
+        border-right: solid cornflowerblue 30px;
+        background-color: yellow;
+    }
+    50% {
+        border-right: solid chartreuse 30px;
+        border-bottom: solid cyan 30px;
+        background-color: cornflowerblue;
+    }
+    75% {
+        border-bottom: solid chartreuse 30px;
+        border-left: solid slateblue 30px;
+        background-color: deeppink;
+    }
+    100% {
+        border-top: solid coral 30px;
+        border-left: solid chartreuse 30px;
+        background-color: brown;
+        transform: rotate(360deg);
+    }
+ }
+.bigBlock {
+    height: 200px;
+    width: 400px;
+    background-color: #02bc9f;
+    margin-top: 40px;
+}
+.block {
+    height: 60px;
+    width: 100px;
+    border: solid darkslategray 1px;
+    background-color: burlywood;
+    position: absolute;
+    top: 320px;
+}
+.block1 {
+    left: 70px;
+}
+.block2 {
+    left: 240px;
+}
+div > div:not(.block) {
+    height: 0;
+    width: 0;
+    border: solid 20px #585de7;
+    border-radius: 50%;
+    animation-name: bouncingBoll;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    position: relative;
+    left: 80px;
+    top: 72px;
+}
+@keyframes bouncingBoll {
+    0% {
+        left: 280px;
+        top: 72px;
+    }
+    10% {
+        left: 260px;
+        top: 60px;
+    }
+    20% {
+        left: 200px;
+        top: 40px;
+    }
+    30% {
+        left: 160px;
+        top: 60px;
+    }
+    40% {
+        left: 120px;
+        top: 72px;
+    }
+    50% {
+        left: 130px;
+        top: 72px;
+    }
+    60% {
+        left: 160px;
+        top: 60px;
+    }
+    70% {
+        left: 200px;
+        top: 40px;
+    }
+    80% {
+        left: 220px;
+        top: 60px;
+    }
+    90% {
+        left: 270px;
+        top: 72px;
+    }
+    100% {
+        left: 280px;
+        top: 72px;
+    }
+}
+.last {
+    height: 80px;
+    width: 80px;
+    background-color: navy;
+    border-radius: 50%;
+    animation-name: gradientEye;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    position: relative;
+    background: radial-gradient(circle closest-side, dodgerblue, orange, green);
+}
+@keyframes gradientEye {
+    0% {
+        border-radius: 0;
+    }
+    25% {
+        background: radial-gradient(circle closest-side, blueviolet, navy, orange, gray);
+    }
+    50% {
+        border-radius: 0;
+        height: 40px;
+        width: 60px;
+        transform: skew(25deg, 15deg);
+    }
+    75% {
+        transform: rotate(90deg);
+    }
+    90% {
+        background: radial-gradient(circle closest-side, orange, blueviolet, dodgerblue, navy);
+        border-radius: 50%;
+    }
+    100% {
+        background: radial-gradient(circle closest-side, blueviolet, navy, orange, gray);
+    }
+}
+
