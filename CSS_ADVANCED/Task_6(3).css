@@ -1,0 +1,99 @@
+.flex.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+.inline {
+    display: inline;
+    vertical-align: middle;
+}
+.inline div {
+    display: inline-block;
+}
+.float {
+    display: block;
+}
+.float .block {
+    float: left;
+}
+.clear-fix {
+    clear: both;
+}
+.container > div {
+    background: url("Images/th1.png") center no-repeat;
+    background-size: 90% 90%;
+}
+.container > div:nth-child(3n) {
+    background: url("Images/th2.png") center no-repeat;
+    background-size: 90% 90%;
+}
+.block {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 3%;
+    box-shadow: 0 0 2px 2px #d3d3d3;
+    cursor: pointer;
+    margin: 35px 2%;
+}
+.square {
+    display: block;
+    width: 180px;
+    height: 140px;
+    position: absolute;
+    padding-top: 40px;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+}
+.square:hover {
+    display: block;
+    background: rgba(0, 0, 0, 0.51);
+    opacity: 0.8;
+}
+button:first-child {
+    margin-top: 210px;
+    width: 80px;
+    height: 35px;
+    color: #808080;
+    background: linear-gradient(to top, #f1f2ec, #fffffe);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px #d3d3d3;
+    cursor: pointer;
+    outline:0;
+}
+button:nth-child(2) {
+    margin-top: 210px;
+    width: 104px;
+    height: 35px;
+    color: #808080;
+    background: linear-gradient(to top, #f1f2ec, #fffffe);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px #d3d3d3;
+    cursor: pointer;
+    outline:0;
+}
+div > button:first-child {
+    margin-right: 10px;
+}
+button:hover {
+    background: #8dc849;
+    color: #ffffff;
+    border: solid #8dc849;
+}
+p {
+    text-align: center;
+}
+.pWhite {
+
+    color: white;
+}
+.pGray {
+    color: lightgrey;
+}
+.sGreen {
+    color: #8dc849;
+}

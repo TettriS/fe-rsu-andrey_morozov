@@ -1,0 +1,38 @@
+.posit {
+    position: absolute;
+}
+.caption {
+    position: relative;
+    height: 40px;
+    width: 100px;
+    padding: 1px 0;
+    background-color: #a68cdd;
+    border: 1px solid #4e5bbe;
+    border-bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 22px;
+    box-shadow: 0 0 5px;
+    z-index: -1;
+}
+.content {
+    position: relative;
+    height: 265px;
+    width: 895px;
+    padding: 10px 10px 0 0;
+    background-color: #a68cdd;
+    box-shadow: 0 0 5px;
+}
+p {
+    font-family: sans-serif;
+    color: #8058cd;
+}
+.caption p {
+    margin: 0;
+    padding: 8px 12px;
+}
+.content p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}

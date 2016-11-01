@@ -1,0 +1,120 @@
+.menu {
+    display: flex;
+    height: 35px;
+    width: 100%;
+    background-image: url(Images/bg.png);
+    position: relative;
+}
+.mail {
+    height: 100%;
+    width: 59px;
+    border: none;
+    outline: none;
+    background: url(Images/icons/mail.png) #3779ad 25% 50% no-repeat;
+}
+.mail:after {
+    display: flex;
+    height: 14px;
+    width: 12px;
+    border: none;
+    border-radius: 50%;
+    content: "2";
+    font-size: 9px;
+    color: white;
+    background-color: #f3292c;
+    padding-top: 5px;
+    padding-left: 7px;
+    margin-left: 20px;
+}
+.massage {
+    height: 100%;
+    width: 84px;
+    border: none;
+    outline: none;
+    background: url(Images/icons/page.png) #3779ad 15% 50% no-repeat;
+}
+.massage:after {
+     display: flex;
+     height: 14px;
+     width: 37px;
+     border: none;
+     border-radius: 50%;
+     content: "223986";
+     font-size: 9px;
+     color: white;
+     background-color: #f3292c;
+     padding-top: 5px;
+     padding-left: 7px;
+     margin-left: 20px;
+}
+.user {
+    height: 100%;
+    width: 57px;
+    border: none;
+    outline: none;
+    background: url(Images/icons/user.png) #3779ad 25% 50% no-repeat;
+}
+.user:after {
+    display: flex;
+    height: 14px;
+    width: 9px;
+    border: none;
+    border-radius: 50%;
+    content: "!";
+    font-size: 8px;
+    color: white;
+    background-color: #f3292c;
+    padding-top: 5px;
+    padding-left: 8px;
+    margin-left: 20px;
+}
+.home {
+    height: 100%;
+    width: 37px;
+    border: none;
+    outline: none;
+    background: url(Images/icons/flag.png) #3779ad 50% 50% no-repeat;
+}
+.file {
+    height: 100%;
+    width: 37px;
+    border: none;
+    outline: none;
+    background: url(Images/icons/checked.png) #3779ad 50% 50% no-repeat;
+}
+.refresh {
+    height: 100%;
+    width: 37px;
+    border: none;
+    outline: none;
+    background: url(Images/icons/refresh.png) #3779ad 50% 50% no-repeat;
+    margin-left: auto;
+}
+.widget {
+    height: 100%;
+    width: 37px;
+    border: none;
+    outline: none;
+    background: url(Images/icons/widget.png) #3779ad 50% 50% no-repeat;
+}
+.login {
+    height: 100%;
+    width: 120px;
+    color: white;
+    font-family: serif;
+    font-size: 16px;
+    padding-right: 30px;
+    border: none;
+    outline: none;
+    background: url(Images/icons/exit.png) #303036 90% 50% no-repeat;
+}
+button:not(:last-child) {
+    border-right: 2px solid #044e8d;
+}
+div.menu button:hover {
+    background-color: #e03939;
+}
+div.menu button:hover:after {
+    background-color: lightslategray;
+    color: white;
+}

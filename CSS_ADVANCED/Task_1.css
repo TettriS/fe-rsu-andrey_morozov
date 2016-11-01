@@ -1,0 +1,47 @@
+.backBlock {
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
+    height: auto;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: #a0dfd1;
+    border: solid 2px #65a89a;
+    border-radius: 2%;
+    padding: 7px;
+    position: relative;
+}
+.headerBlock {
+    background: linear-gradient(to top, #ffc102, #ffd802);
+    height: 35px;
+    margin-bottom: 0;
+    border-top: solid 1px #47c5a6;
+}
+.triangleBlock {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: solid 10px #edecde;
+    border-top: solid 10px #ffba02;
+    margin-top: 35px;
+    margin-left: -130px;
+}
+p {
+    margin: 9px 10px;
+}
+.contentBlock p {
+    margin-top: 15px;
+}
+.contentBlock {
+    height: auto;
+    color: #617e8c;
+    background-color: #edecde;
+    font-size: 13px;
+    border-bottom: solid 1px #47c5a6;
+}
+.headerBlock, .contentBlock {
+    width: 100%;
+    border-left: solid 1px #47c5a6;
+    border-right: solid 1px #47c5a6;
+}
