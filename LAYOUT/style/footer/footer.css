@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    height: 30px;
+    width: 100%;
+}
+.footer--theme {
+    background-color: #1a202d;
+}
+.footer__button {
+    height: 100%;
+    width: 3%;
+}
+.footer__button--theme {
+    border: none;
+}
+.footer__button:first-child {
+    margin-left: 94%;
+}
+.footer__button:hover {
+    background-color: #18a5fa;
+}
+.footer__button--theme-support {
+    background-color: #212839;
+}
+.footer__button--theme-settings {
+    background-color: #18a5fa;
+}

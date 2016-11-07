@@ -1,0 +1,145 @@
+main {
+    display: flex;
+    flex-flow: row wrap;
+    height: 80%;
+    width: 100%;
+}
+.menu {
+    height: auto;
+    width: 15%;
+}
+.menu--theme {
+    background-color: #30374a;
+}
+.menu__button {
+    background-color: #f27a5b;
+    color: #fdfefb;
+    height: 30px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list__button {
+    min-height: 40px;
+    height: auto;
+    width: 11.5em;
+    border: none;
+    background-color: #30374a;
+    color: white;
+    text-align: left;
+    padding-left: 1em;
+}
+.search-content-box {
+    display: flex;
+    flex-flow: row wrap;
+    height: 37em;
+    width: 85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.search-box {
+    height: auto;
+    width: 96%;
+}
+.search-box__title {
+    height: 40px;
+    width: 100%;
+    padding: 20px;
+    color: #434b63;
+    background-color: #eef1f8;
+    border-bottom: 1px solid #e5e8ef;
+}
+.search-box__block {
+    height: 30px;
+    width: 100%;
+    color: #434b63;
+    background-color: #eef1f8;
+    border-bottom: 1px solid #e5e8ef;
+    padding: 10px 30px 0 30px;
+}
+.search-box__buttons {
+    height: auto;
+    width: auto;
+    border: none;
+    background-color: transparent;
+    border-radius: 1em;
+}
+.search-box__buttons:hover {
+    color: white;
+    background-color: #98b3ce;
+}
+.form {
+    display: inline-flex;
+}
+.search {
+    border: 1px solid #e5e8ef;
+    border-radius: 1em;
+}
+.button-search {
+    position: relative;
+    right: 25px;
+    height: 15px;
+    width:  15px;
+    border: none;
+    background-color: transparent;
+}
+.content {
+    display: flex;
+    flex-flow: row wrap;
+}
+.content__block {
+    margin: 25px auto;
+}
+.image {
+    height: 275px;
+    width: 200px;
+    border-radius: 2%;
+}
+.image--photo {
+    position: absolute;
+    top: 1px;
+    right: 8%;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.text--lower {
+    font-size: 10px;
+}
+.text--theme-gray {
+    color: #97acc3;
+}
+.text--theme-star {
+    color: #ffab02;
+}
+.author_book {
+    font-family: sans-serif;
+}
+.author_name {
+    font-family: sans-serif;
+    color: #616786;
+}
+.icon--theme {
+    color: #79839e;
+}
+.icon--theme-red {
+    color: #e44c68;
+    font-size: 0.5em;
+}
+.icon--theme-orange {
+    color: #fdaa09;
+    font-size: 0.5em;
+}
+.icon--theme-cyan {
+    color: #02c0dc;
+    font-size: 0.5em;
+}
+.icon--theme-violet {
+    color: #7a75cc;
+    font-size: 0.5em;
+}
