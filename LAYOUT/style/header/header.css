@@ -1,40 +1,45 @@
 @font-face {
     font-family: "Proxima Nova Regular";
-    src: url("../font-family/Proxima%20Nova%20Regular.otf");
+    src: url("../font-family/Proxima Nova Regular.otf");
 }
 .body {
     margin: 0;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: wrap;
     height: 100%;
     width: 100%;
+    padding: 45px 0;
 }
 .header {
-    flex-flow: row wrap;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    display: inline-flex;
+    flex-flow: row;
     height: 45px;
     width: 100%;
     padding: 0;
+    z-index: 100;
 }
 .header--theme {
     background-color: #30374a;
 }
 .header__button {
-    height: 46px;
-    width: 160px;
+    position: relative;
+    top: 0;
+    height: 45px;
+    width: 8%;
 }
 .header__button:first-child {
-    margin-left: 76.1%;
+    margin-left: 76%;
 }
 .header__button--theme {
-    position: relative;
-    top: -13px;
-    right: -3px;
     border: none;
     background-color: #30374a;
 }
 .header__button--theme-2x {
     height: 45px;
-    width: 160px;
+    width: 8%;
 }
 .header__button--profile {
     background-color: #18a5fa;

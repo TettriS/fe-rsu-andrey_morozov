@@ -1,8 +1,12 @@
 .footer {
+    position: fixed;
     display: flex;
     flex-flow: row wrap;
     height: 45px;
     width: 100%;
+    bottom: 0;
+    top: auto;
+    z-index: 100;
 }
 .footer--theme {
     background-color: #1a202d;
