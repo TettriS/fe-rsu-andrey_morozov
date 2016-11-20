@@ -1,14 +1,23 @@
 main {
     height: 100%;
-    width: auto;
+    width: 85%;
+    position: relative;
+    left: 15%;
+    overflow-x: hidden;
 }
 .menu {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     position: fixed;
-    height: 120%;
+    height: 100%;
+    left: 0;
     width: 15%;
     z-index: 100;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+ul:last-child {
+    margin-bottom: 90px;
 }
 .menu--theme {
     background-color: #30374a;
@@ -17,10 +26,9 @@ main {
     background-color: #f27a5b;
     color: #fdfefb;
     min-height: 32px;
-    padding-top: 12px;
-    text-align: center;
     border-radius: 5px;
-    margin: 38px 18%;
+    padding-top: 12px;
+    margin: 1% auto;
 }
 .menu__list {
     list-style: none;
@@ -41,10 +49,7 @@ main {
     display: flex;
     flex-flow: column wrap;
     height: 100%;
-    width: 85%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    margin-left: 15%;
+    width: 100%;
 }
 .search-box {
     height: auto;
@@ -53,7 +58,7 @@ main {
 .search-box__title {
     height: 40px;
     width: 100%;
-    padding: 15px;
+    padding-left: 15px;
     color: #434b63;
     background-color: #eef1f8;
     border-bottom: 1px solid #e5e8ef;
@@ -79,21 +84,22 @@ main {
 }
 .form {
     display: inline-flex;
+    flex-flow: row;
 }
 .search {
-    position: relative;
-    right: -70%;
+    position: absolute;
+    right: 2%;
     border: 1px solid #e5e8ef;
     border-radius: 20px;
-    top: -8px;
+    top: 50px;
     height: 30px;
-    width: 400px;
+    width: 35%;
     z-index: 1;
 }
 .button-search {
-    position: relative;
-    right: -62%;
-    top: -8px;
+    position: absolute;
+    right: 2%;
+    top: 60px;
     border: none;
     background-color: transparent;
     z-index: 1;
@@ -101,6 +107,11 @@ main {
 .content {
     display: flex;
     flex-flow: wrap;
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 50px;
 }
 .content__block {
     margin: 25px 0 0 20px;
@@ -113,11 +124,14 @@ main {
 .image--photo {
     border: 2px solid white;
     border-radius: 50%;
-    margin-right: 10px;
+    margin: 0;
 }
 .text-profile {
+    display: inline-flex;
+    flex-flow: row nowrap;
     position: relative;
     top: -10px;
+    margin-left: 10px;
 }
 .text--lower {
     font-size: 10px;
