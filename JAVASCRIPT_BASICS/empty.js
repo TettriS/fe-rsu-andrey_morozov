@@ -1,16 +1,18 @@
-var a = 9;
-var b = "Lives";
-alert(a);
-alert(b);
-
 /* 1 */
 
-function triangleArea (a, b, c) {
-    return (a + b + c)/2;
-}
-alert( triangleArea(12, 15, 19) );
+var a = 9;
+var b = "Lives";
+console.log(a);
+console.log(b);
 
 /* 2 */
+
+function triangleArea (a, h) {
+    return (0.5 * a) * h;
+}
+console.log ( triangleArea(12, 15) );
+
+/* 3 */
 
 var arri = [ 2, 6, 4, 6, 7, 2, 3, 6, 5, 23, 8 ];
 function forReverse (arr) {
@@ -23,7 +25,7 @@ function forReverse (arr) {
     return m;
 }
 
-alert( forReverse(arri) );
+console.log ( forReverse(arri) );
 
 function whileReverse (arr) {
     var m = [];
@@ -37,7 +39,7 @@ function whileReverse (arr) {
     return m;
 }
 
-alert( whileReverse(arri) );
+console.log ( whileReverse(arri) );
 
 function doWhileReverse (arr) {
     var m = [];
@@ -52,16 +54,17 @@ function doWhileReverse (arr) {
     return m;
 }
 
-alert( doWhileReverse(arri) );
+console.log ( doWhileReverse(arri) );
 
-/* 3 */
-
-var poof = 10;
-alert ( poof++ );
-alert ( poof );
-alert ( ++poof );
 
 /* 4 */
+
+var poof = 10;
+console.log ( poof++ );
+console.log ( poof );
+console.log ( ++poof );
+
+/* 5 */
 
 function proof( a ) {
     if ( a === 0 ) {
@@ -74,24 +77,23 @@ function proof( a ) {
         return a + " - is Not a number."
     }
 }
-alert ( proof( 2 ) );
-alert ( proof( "7" ) );
-alert ( proof ( 0 ) );
-alert ( proof ( "roof") );
-
-/* 5 */
-
-var name = prompt ("You name is : ");
-alert( "You name is " + name);
+console.log ( proof( 2 ) );
+console.log ( proof( "7" ) );
+console.log ( proof ( 0 ) );
+console.log ( proof ( "roof") );
 
 /* 6 */
 
-function factorial (a) {
-    for ( var i = 1; i <= a; ++i ) {
-        a *= i;
-    }
-    return a;
-}
-alert ( factorial(35) );
+var name = prompt ("You name is : ");
+console.log ( "You name is " + name);
 
 /* 7 */
+
+function factorial (a) {
+    if ( a > 1 ) {
+        return a * fa( a - 1 );
+    } else {
+        return 1;
+    }
+}
+console.log (factorial(25));
