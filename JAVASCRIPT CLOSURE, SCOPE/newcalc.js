@@ -1,29 +1,21 @@
 "use strict";
 function Calculator () {
     var result = 0;
-    this.add = function (x) {
+    this.add = function add (x) {
         result += x;
-        return function (y) {
-            result += y;
-        };
+        return add;
     }
-    this.substract = function (x) {
+    this.substract = function substract (x) {
         result -= x;
-        return function (y) {
-            result -= y;
-        };
+        return substract;
     }
-    this.divide = function (x) {
+    this.divide = function divide (x) {
         result *= x;
-        return function (y) {
-            result *= y;
-        };
+        return divide;
     }
-    this.multiply = function (x) {
+    this.multiply = function multiply (x) {
         result /= x;
-        return function (y) {
-            result /= y;
-        };
+        return multiply;
     }
     this.reset = function (x) {
         result = 0;
