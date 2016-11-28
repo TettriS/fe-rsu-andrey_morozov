@@ -1,0 +1,30 @@
+.drop-down {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.drop-down__button {
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    background-color: #15a5fa;
+}
+
+.drop-down__avatar {
+    height: 2em;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 7px 0;
+}
+
+.drop-down__name {
+    padding: 0 10px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.drop-down__icon {
+    color: white;
+    margin: 0 7px;
+}

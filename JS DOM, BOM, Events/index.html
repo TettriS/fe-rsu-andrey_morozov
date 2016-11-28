@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+    
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <link rel="stylesheet" href="style/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="style/family.css">
+    <link rel="stylesheet" href="style/scrollbar.css">
+    <link rel="stylesheet" href="style/complex.css">
+    <link rel="stylesheet" href="style/menu-list.css">
+    <link rel="stylesheet" href="style/drop-down.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/add-list.css">
+    <link rel="stylesheet" href="style/navigation.css">
+    <link rel="stylesheet" href="style/account-lists.css">
+    <link rel="stylesheet" href="style/history-list.css">
+    <link rel="stylesheet" href="style/filter.css">
+    <link rel="stylesheet" href="style/books-block.css">
+    <link rel="stylesheet" href="style/footer.css">
+</head>
+
+<body class="body">
+    <div id = "wrapper">
+        <header class="header">
+            <ul class="menu-list">
+                <li class="menu-list__item"><a href="/" class="menu-list__link">help center</a></li>
+                <li class="menu-list__item"><div class="menu-list__item-empty"></div></li>
+                <li class="menu-list__item"><a href="/" class="menu-list__link">our support</a></li>
+                <li class="menu-list__item menu-list__last-item">
+                    <button class="drop-down drop-down__button">
+                        <img class="drop-down__avatar" src="style/images/profile.png" alt="avatar">
+                        <span class="drop-down__name">jhon doe</span>
+                        <i class="fa fa-chevron-circle-down drop-down__icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </header>
+        <main class="main">
+            <aside class="main__side-bar">
+                <ul class="add-list">
+                    <li class="add-list__item">
+                        <button class="add-list__button">
+                            <i class="fa fa-plus add-list__icon"></i>
+                            <span class="add-list__value">add a book</span>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="navigation">
+                    <li class="navigation__item">
+                        <i class="fa fa-book navigation__icon"></i>
+                        <a href="/" class="navigation__link">now reading</a>
+                    </li>
+                    <li class="navigation__item navigation__active">
+                        <i class="fa fa-globe navigation__icon"></i>
+                        <a href="/" class="navigation__link">browse</a>
+                    </li>
+                    <li class="navigation__item">
+                        <i class="fa fa-shopping-cart navigation__icon"></i>
+                        <a href="/" class="navigation__link">buy books</a>
+                    </li>
+                    <li class="navigation__item">
+                        <i class="fa fa-star navigation__icon"></i>
+                        <a href="/" class="navigation__link">favourite books</a>
+                    </li>
+                    <li class="navigation__item">
+                        <i class="fa fa-th-list navigation__icon"></i>
+                        <a href="/" class="navigation__link">wishlist</a>
+                    </li>
+                    <li class="navigation__item">
+                        <i class="fa fa-clock-o navigation__icon"></i>
+                        <a href="/" class="navigation__link">history</a>
+                    </li>
+                </ul>
+                <ul class="account-lists">
+                    <li class="account-lists__item">
+                        <i class="fa fa-circle account-list--icon-most account-list__icon"></i>
+                        <a href="/" class="account-lists__list">most read titles</a>
+                    </li>
+                    <li class="account-lists__item">
+                        <i class="fa fa-circle account-list--icon-best account-list__icon"></i>
+                        <a href="/" class="account-lists__list">best of list</a>
+                    </li>
+                    <li class="account-lists__item">
+                        <i class="fa fa-circle account-list--icon-classic account-list__icon"></i>
+                        <a href="/" class="account-lists__list">classic novels</a>
+                    </li>
+                    <li class="account-lists__item">
+                        <i class="fa fa-circle account-list--icon-non account-list__icon"></i>
+                        <a href="/" class="account-lists__list">non fiction</a>
+                    </li>
+                </ul>
+                <ul class="history-list">
+                    <li class="history-list__item">
+                        <i class="fa fa-clock-o history-list__icon"></i>
+                        <span class="history-list__value">You added </span>
+                        <a href="/" class="history-list__highlight">fight club</a>
+                        <span class="history-list__value">by </span>
+                        <a href="/" class="history-list__highlight">chuck palahniuk</a>
+                        <span class="history-list__value"> to your </span>
+                        <a href="/" class="history-list__highlight">must read titles</a>
+                    </li>
+                    <li class="history-list__time">
+                        <span class="history-list__value">24 minutes ago</span>
+                    </li>
+                    <li class="history-list__item">
+                        <i class="fa fa-clock-o history-list__icon"></i>
+                        <span class="history-list__value">You added </span>
+                        <a href="/" class="history-list__highlight">the trial</a>
+                        <span class="history-list__value">by </span>
+                        <a href="/" class="history-list__highlight">franz kafka</a>
+                        <span class="history-list__value"> to your </span>
+                        <a href="/" class="history-list__highlight">must read titles</a>
+                    </li>
+                    <li class="history-list__time">
+                        <span class="history-list__value">48 minutes ago</span>
+                    </li>
+                </ul>
+            </aside>
+            <content class="main__content">
+                <div class="main__content--title"><h1 class="main__content--value">browse available books</h1></div>
+                <div class="filter">
+                    <ul class="filter__menu">
+                        <li class="filter__item"><button class="filter__button filter--select"> all books</button></li>
+                        <li class="filter__item"><button class="filter__button"> most recent</button></li>
+                        <li class="filter__item"><button class="filter__button"> most popular</button></li>
+                        <li class="filter__item"><button class="filter__button"> free books</button></li>
+                    </ul>
+                    <div class="filter__search">
+                        <input class="filter__input" type="search" name="search" placeholder=" Enter Keywords"></input>
+                        <i class="fa fa-search filter__icon"></i>
+                    </div>
+                </div>
+                <div class="books-block">
+                    <ul class="books-block__list">
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/1.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">jewels of nizam</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> geeta devi</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/2.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">cakes & bakes</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> sanjeev kapoor</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/3.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">jamie's kitchen</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> jamie oliver</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/4.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">inexpensive family meals</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> simon holst</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/5.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">paleo slow cooking</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> chrissy gower</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/6.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">cook like <span class="books-block--by">an</span> italian</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> chrissy gower</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/7.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">suneeta vaswani</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> geeta devi</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/8.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">jamie does</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> jamie oliver</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/9.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">jamie's italy</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> jamie oliver</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__item">
+                            <ul class="books-block__book">
+                                <li class="books-block__book-part">
+                                    <img src="style/images/10.png" alt="book cover" class="books-block--image">
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--name">vegetables cookbook</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <span class="books-block--author"><span class="books-block--by">by </span> matthew biggs</span>
+                                </li>
+                                <li class="books-block__book-part">
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                    <i class="fa fa-star books-block--stars"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                        <li class="books-block__empty"></li>
+                    </ul>
+                </div>
+            </content>
+        </main>
+        <footer class="footer">
+            <ul class="footer__list">
+                <li class="footer_list__item"><a href="/" class="footer_list__link"><i class="fa fa-question-circle footer_list__icon"></i></a></li>
+                <li class="footer_list__item footer_list__item-settings"><a href="/" class="footer_list__link"><i class="fa fa-gear footer_list__icon"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+<!--<script src="script.js"></script>-->
+</body>
+
+</html>
