@@ -1,14 +1,16 @@
 .main {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     flex-grow: 1;
+    width: 100%;
     overflow: hidden;
 }
 
 .main__side-bar {
     display: flex;
     flex-flow: column nowrap;
-    width: 20%;
+    flex-shrink: 0;
+    width: 15%;
     background-color: #1a232e;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -16,10 +18,18 @@
 
 .main__content {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     flex-shrink: 0;
-    width: 80%;
+    flex-grow: 1;
+    width: 85%;
     overflow: hidden;
+}
+
+.main__header-line {
+    display: flex;
+    flex-flow: column;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .main__content--title {
@@ -27,7 +37,7 @@
     flex-flow: row nowrap;
     font-size: 14px;
     background-color: #eef1f8;
-    padding: 10px 0 10px 2em;
+    padding-left: 2em;
 }
 
 .main__content--value {
