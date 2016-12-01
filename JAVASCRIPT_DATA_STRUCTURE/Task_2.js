@@ -5,34 +5,20 @@
 
 // 1
 
-var now = new Date(),
-    one = new Date(2016, 11, 7),
-    two = new Date(2016, 11, 8),
-    tree = new Date(2016, 11, 9),
-    four = new Date(2016, 11, 10),
-    five = new Date(2016, 11, 11),
-    six = new Date(2016, 11, 12),
-    seven = new Date(2016, 11, 13),
-    millennium = new Date(2000, 0, 1),
-    arr = [2,1,5,43,"as","fa","dsh",23,35,"46s","67f","yhr","w",3,"wsfqf245"],
-    arr3 = [2,2,2,5,2,5,3,7,4,3,3,7,5,2,3,5,7,7,2,3,2,7,5,4,3];
+var now = new Date();
+var one = new Date(2016, 11, 7);
+var two = new Date(2016, 11, 8);
+var tree = new Date(2016, 11, 9);
+var four = new Date(2016, 11, 10);
+var five = new Date(2016, 11, 11);
+var six = new Date(2016, 11, 12);
+var seven = new Date(2016, 11, 13);
+var millennium = new Date(2000, 0, 1);
+var arr = [2,1,5,43,"as","fa","dsh",23,35,"46s","67f","yhr","w",3,"wsfqf245"];
+var arr3 = [2,2,2,5,2,5,3,7,4,3,3,7,5,2,3,5,7,7,2,3,2,7,5,4,3];
 function nowDay(x) {
-    switch( x.getDay()) {
-        case 1:
-            return "Today is: Monday!";
-        case 2:
-            return "Today is: Tuesday!";
-        case 3:
-            return "Today is: Wednesday!";
-        case 4:
-            return "Today is: Thursday!";
-        case 5:
-            return "Today is: Friday!";
-        case 6:
-            return "Today is: Saturday!";
-        case 0:
-            return "Today is: Sunday!";
-    }
+	var arr = ['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", ]
+	return "Today is: " + arr[x.getDay()] + "!";
 }
 console.log (nowDay(now));
 console.log (nowDay(one));
@@ -87,12 +73,6 @@ function is_array (x) {
 console.log (is_array ('QWE'));
 console.log (is_array ([1, 2, 4, 0]));
 
-//function User() {}
-//
-//var user = new User();
-//
-//alert( user instanceof User ); // true
-
 // 6
 
 function clone (arr) {
@@ -109,9 +89,9 @@ console.log(arr2);
 // 7
 
 function oftenRepeated (a) {
-    var result = 0,
-        sum,
-        sum2 = 0;
+    var result = 0;
+    var sum;
+    var sum2 = 0;
     for ( var b = 0 ; b < a.length; b++ ) {
         sum = 0;
         for ( var i = 0; i < a.length; i++ ) {
@@ -242,14 +222,7 @@ function sortForName(arr) {
 console.log(sortForName(library));
 
 // 13
-
-var arr11 = [1,2,3,4],
-    arr12 = [4,5,6,7,8,9];
-function mergeArr (arr1 , arr2) {
-    var result = arr1;
-    for ( var i = 0 ; i < arr2.length ; i++ ) {
-        result.push(arr2[i]);
-    }
+/*
     function delCopy(arr){
         for (var i = 0; i < arr.length; i++) {
             for (var j = i + 1; j < arr.length; ) {
@@ -261,6 +234,16 @@ function mergeArr (arr1 , arr2) {
             }
         }
         return arr;
+    }
+*/
+
+
+var arr11 = [1,2,3,4];
+var arr12 = [4,5,6,7,8,9];
+function mergeArr (arr1 , arr2) {
+    var result = arr1;
+    for ( var i = 0 ; i < arr2.length ; i++ ) {
+        result.push(arr2[i]);
     }
     return delCopy(result);
 }
@@ -294,8 +277,8 @@ console.log(random(arr2));
 
 function toRandomIndex(arr, n) {
     var y = arr.indexOf(n),
-        random = (Math.floor(Math.random() * arr.length)),
-        z = arr.splice(y, 1);
+    var random = (Math.floor(Math.random() * arr.length)),
+    var z = arr.splice(y, 1);
     arr.splice(random, 0, z[0]);
     return arr;
 }
@@ -369,7 +352,7 @@ function camelize (str) {
 console.log(camelize("Java Script"));
 console.log(camelize("java-script")); 
 console.log(camelize("Java Script Exercises"));
-/* for test:
+/*
 "JavaScript"
 "JavaScript"
 "JavaScriptExercises"
@@ -406,8 +389,8 @@ console.log(minElem(arr3));
 
 // 24
 
-var nNum = 0,
-    notNum = "asdr";
+var nNum = 0;
+var notNum = "asdr";
 
 function varIsNum (v) {
     return !isNaN(parseFloat(v)) && isFinite(v);
@@ -437,12 +420,12 @@ console.log(sumOfValues(arr3));//"98"
 var obj1 = {   
         author: 'Bill Gates',
         title: 'The Road Ahead',
-        libraryID: 1254},
-    obj2 = {   
+        libraryID: 1254};
+ var obj2 = {   
         author: 'Steve Jobs',
         title: 'Walter Isaacson',
-        libraryID: 4264},
-    obj3 = {   
+        libraryID: 4264};
+ var obj3 = {   
         author: 'Suzanne Collins',
         title: 'Mockingjay: The Final Book of The Hunger Games',
         libraryID: 3245};
