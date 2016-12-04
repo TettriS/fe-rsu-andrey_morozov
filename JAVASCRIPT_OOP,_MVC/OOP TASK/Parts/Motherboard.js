@@ -1,5 +1,5 @@
-function Motherboeard(name, firm, watt) {
+function Motherboard(name, firm, watt) {
     Part.call(this, name, firm, watt);
 }
 
-Motherboeard.prototype = Object.create(Part.prototype);
+Motherboard.prototype = Object.create(Part.prototype);

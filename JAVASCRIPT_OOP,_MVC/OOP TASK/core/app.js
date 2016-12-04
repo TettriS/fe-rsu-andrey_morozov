@@ -13,5 +13,5 @@ Application.prototype.start = function () {
 
     var full = new Full();
     full.showWatt();
-    full.search('Home Phone');
+    full.search('Forever');
 };

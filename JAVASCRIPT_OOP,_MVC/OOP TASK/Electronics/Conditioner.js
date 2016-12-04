@@ -1,7 +1,7 @@
 function Conditioner(name, firm) {
-    var Motherboard = new Motherboard("Conditioner Board", firm, 50);
-    var Case = new Case("Conditioner Case", firm, 0);
-    Complex.call(this, name, firm, [Motherboard, Case]);
+    var motherboard = new Motherboard("Conditioner Board", firm, 50);
+    var conditionerCase = new Case("Conditioner Case", firm, 0);
+    Electronic.call(this, name, firm, [motherboard, conditionerCase]);
 }
 
-Phone.prototype = Object.create(Electronic.prototype);
+Conditioner.prototype = Object.create(Electronic.prototype);

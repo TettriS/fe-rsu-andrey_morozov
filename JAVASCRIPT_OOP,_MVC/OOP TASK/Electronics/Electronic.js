@@ -1,4 +1,4 @@
-function Electronic(name, parts, firm) {
+function Electronic(name, firm, parts) {
     this.parts = parts;
     this.status = "off";
     Part.call(this, name, firm, this.getWatt());
@@ -20,7 +20,9 @@ Electronic.prototype.getWatt = function () {
     var totalWatt = 0;
 
     for (var i = 0; i < this.parts.length; i++) {
-        totalWatt += this.parts[i].getWatt();
+        if (this.status === 'on') {
+            totalWatt += this.parts[i].getWatt();
+        }
     }
 
     return totalWatt;
