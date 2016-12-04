@@ -5,7 +5,8 @@ function Phone(name, firm) {
     var screen = new Screen("Phone Screen", firm, 1);
     var battery = new Battery("Phone Battery", firm, 1);
     var phoneCase = new Case("Phone Case", firm, 0);
-    Electronic.call(this, name, firm, [motherboard, cpu, memory, screen, battery, phoneCase]);
+    Electronic.call(
+        this, name, firm, [motherboard, cpu, memory, screen, battery, phoneCase]);
 }
 
-Phone.prototype = Object.create(Electronic.prototype); 
+Phone.prototype = Object.create(Electronic.prototype);
