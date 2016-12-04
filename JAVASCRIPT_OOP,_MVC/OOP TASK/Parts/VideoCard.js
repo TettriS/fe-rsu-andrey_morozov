@@ -1,4 +1,4 @@
-function VideoCard (name, firm, watt) {
+function VideoCard(name, firm, watt) {
     Part.call(this, name, firm, watt);
 }
 

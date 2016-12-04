@@ -1,4 +1,4 @@
- function Battery (name, firm, watt) {
+ function Battery(name, firm, watt) {
      Part.call(this, name, firm, watt);
  }
 

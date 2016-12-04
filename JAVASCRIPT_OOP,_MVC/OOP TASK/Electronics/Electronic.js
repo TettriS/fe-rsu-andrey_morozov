@@ -1,4 +1,4 @@
-function Electronic (name, parts, firm) {
+function Electronic(name, parts, firm) {
     this.parts = parts;
     this.status = "off";
     Part.call(this, name, firm, this.getWatt());

@@ -1,4 +1,4 @@
-function Part (name, firm, watt) {
+function Part(name, firm, watt) {
     this.name = name;
     this.firm = firm;
     this.watt = watt;
@@ -18,6 +18,8 @@ Part.prototype.getWatt = function () {
 
 Part.prototype.checkIfHas = function (what) {
     if (this.getName().toLowerCase().indexOf(what.toLowerCase()) >= 0) {
+        console.info('"' + what + '" has been found in "' + this.getName() + '"');
+    } else if (this.getFirm().toLowerCase().indexOf(what.toLowerCase()) >= 0) {
         console.info('"' + what + '" has been found in "' + this.getName() + '"');
     }
 };

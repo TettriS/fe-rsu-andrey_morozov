@@ -1,4 +1,4 @@
-function Motherboeard (name, firm, watt) {
+function Motherboeard(name, firm, watt) {
     Part.call(this, name, firm, watt);
 }
 

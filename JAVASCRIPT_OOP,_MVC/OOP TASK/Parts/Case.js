@@ -1,4 +1,4 @@
-function Case (name, firm, watt) {
+function Case(name, firm, watt) {
     Part.call(this, name, firm, watt);
 }
 
