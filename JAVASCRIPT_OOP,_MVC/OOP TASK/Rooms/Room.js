@@ -15,21 +15,11 @@ Room.prototype.checkIfHas = function (what) {
     }
 };
 
-Room.prototype.off = function (part) {
-    part.status = "off";
-    return "This is" + this.status;
-}
-
-Room.prototype.on = function (part) {
-    part.status = "on";
-    return "This is" + this.status;
-}
-
 Room.prototype.getWatt = function () {
     var totalWatt = 0;
 
     for (var i = 0; i < this.parts.length; i++) {
-        if (this.status === 'on') {
+        if (this.parts[i].status === 'on') {
             totalWatt += this.parts[i].getWatt();
         }
     }

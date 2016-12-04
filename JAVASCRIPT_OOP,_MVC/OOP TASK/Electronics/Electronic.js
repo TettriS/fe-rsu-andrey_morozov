@@ -8,12 +8,12 @@ Electronic.prototype = Object.create(Part.prototype);
 
 Electronic.prototype.off = function () {
     this.status = "off";
-    return "This is" + this.status;
+    return "This is " + this.status;
 }
 
 Electronic.prototype.on = function () {
     this.status = "on";
-    return "This is" + this.status;
+    return "This is " + this.status;
 }
 
 Electronic.prototype.getWatt = function () {
