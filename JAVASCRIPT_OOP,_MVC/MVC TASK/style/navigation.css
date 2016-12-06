@@ -1,0 +1,37 @@
+.navigation {
+    display: flex;
+    flex-flow: column wrap;
+    flex-shrink: 0;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 0.8em;
+    padding: 0 0 1em 0;
+    margin: 2.5px 0;
+    background-color: #1f2638;
+    border-top: 1px solid #272d3e;
+    border-bottom: 1px solid #171c2a;
+}
+
+.navigation__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 3em;
+    color: #78829d;
+}
+
+.navigation__active {
+    color: white;
+    background-color: #18a4fa;
+}
+
+.navigation__icon {
+    color: inherit;
+    margin: 0 1em 0 1.5em;
+}
+
+.navigation__link {
+    color: inherit;
+    text-transform: capitalize;
+    text-decoration: none;
+}

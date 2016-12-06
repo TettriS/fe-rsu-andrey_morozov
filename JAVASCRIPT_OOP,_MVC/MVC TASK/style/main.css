@@ -1,0 +1,47 @@
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main__side-bar {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-shrink: 0;
+    width: 15%;
+    background-color: #17212d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.main__content {
+    display: flex;
+    flex-flow: row wrap;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: 85%;
+    overflow: hidden;
+}
+
+.main__header-line {
+    display: flex;
+    flex-flow: column;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.main__content--title {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 11px;
+    background-color: #eef1f8;
+    padding: 1em 0 0.3em 1.6em;
+}
+
+.main__content--value {
+    font-weight: normal;
+    color: #464c64;
+    text-transform: capitalize;
+}

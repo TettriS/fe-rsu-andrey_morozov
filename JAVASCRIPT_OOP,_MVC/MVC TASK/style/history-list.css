@@ -1,0 +1,40 @@
+.history-list {
+    display: flex;
+    flex-flow: column wrap;
+    flex-shrink: 0;
+    justify-content: center;
+    list-style-type: none;
+    padding: 1em 0;
+    margin: 2.5px 0;
+    background-color: #1f2638;
+    border-top: 1px solid #272d3e;
+}
+
+.history-list__item {
+    padding: 1em 0 1em 3.5em;
+    font-size: 0.8em;
+    position: relative;
+}
+
+.history-list__icon {
+    top: 1.3em;
+    position: absolute;
+    left: 1.5em;
+    color: #78829d;
+}
+
+.history-list__value {
+    color: #575e71;
+}
+
+.history-list__time {
+    font-size: 0.8em;
+    padding: 0 0 2em 3.5em;
+    color: #78829d;
+}
+
+.history-list__highlight {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #78829d;
+}

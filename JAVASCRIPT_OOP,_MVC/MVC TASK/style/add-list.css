@@ -1,0 +1,66 @@
+.add-list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    list-style-type: none;
+    flex-shrink: 0;
+    padding: 2px 0 0 0;
+    margin-top: 0;
+    margin-bottom: 2.5px;
+    background-color: #1f2638;
+    border-bottom: 1px solid #171c2a;
+}
+
+.add-list__item {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2em 0;
+}
+
+.add-list__icon {
+    color: white;
+    font-size: 1.2em;
+}
+
+.add-list__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2em 1.7em 1em 1.4em;
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    background-color: #f27a5b;
+
+}
+
+.add-list__value {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    padding-left: 1.5em;
+}
+
+.add-list__form {
+
+}
+
+.add-list__cover {
+    display: flex;
+    margin: auto;
+    border: none;
+    background-color: #f27a5b;
+    color: white;
+}
+
+.add-list__name {
+
+}
+
+.add-list__author {
+
+}
+
+.add-list__submit {
+
+}
