@@ -72,6 +72,6 @@ View.prototype.createBook = function(book) {
 
 View.prototype.init = function() {
     for (var i = this.model.books.length - 1; i >= 0; i--) {
-        this.view.createBook(this.model.books);
+        this.createBook(this.model.books[i]);
     }
 }
