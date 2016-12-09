@@ -50,6 +50,7 @@
     border-radius: 2em;
     font-size: 0.8em;
     margin-right: 1em;
+    outline: none;
 }
 
 .filter__icon {

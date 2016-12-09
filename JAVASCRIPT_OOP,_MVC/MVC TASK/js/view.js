@@ -3,8 +3,22 @@ function View(model, controller) {
     this.ctrl = controller;
     
     // this.counterElement = document.getElementById('counter');
-    this.search = document.getElementById('search');
-    this.addBook = document.getElementById('addABook');
+    this.search = document.querySelector('.filter__input');
+    this.addAButton = document.querySelector('.add-list__button');
+    this.addInput = document.querySelector('.add-list__submit');
+    model.onAddBook.subscribe();
+    model.onDelBook.subscribe();
+    model.onNewNotification.subscribe();
+}
+
+View.prototype.newBook = function() {
+    var book = {};
+    book.coverAddress = document.querySelector('.add-list__cover').value;
+    book.name = document.querySelector('.add-list__name').value;
+    book.author = document.querySelector('.add-list__author').value;
+    book.rating = document.querySelector('.add-list__rating').value;
+    this.model.addBook(book);
+    this.refresh();
 }
 
 View.prototype.createBook = function(book) {
@@ -20,7 +34,7 @@ View.prototype.createBook = function(book) {
     if (book.name === 'Empty') {
 
         var bookPartCover = document.createElement('li');
-        bookPartCover.className = 'books-block__book-part';
+        bookPartCover.className = 'books-block__empty';
         bookElem.appendChild(bookPartCover);
 
     } else {
@@ -70,8 +84,21 @@ View.prototype.createBook = function(book) {
     bookBlock.appendChild(bookCase);
 }
 
-View.prototype.init = function() {
+// View.prototype.createNotification() {
+
+// }
+
+View.prototype.refresh = function() {
+    var bookListElement = document.getElementsByClassName("books-block__item");
+    while (bookListElement.firstChild) {
+        bookListElement.removeChild(bookListElement.firstChild)
+    }
     for (var i = this.model.books.length - 1; i >= 0; i--) {
         this.createBook(this.model.books[i]);
     }
+}
+
+View.prototype.init = function() {
+    this.refresh();
+    this.addInput.addEventListener('click', this.newBook());
 }

@@ -27,11 +27,11 @@
     align-items: center;
     justify-content: center;
     padding: 1.2em 1.7em 1em 1.4em;
+    margin: auto;
     border: none;
     outline: none;
     border-radius: 0.3em;
     background-color: #f27a5b;
-
 }
 
 .add-list__value {
@@ -41,26 +41,37 @@
     padding-left: 1.5em;
 }
 
-.add-list__form {
-
+.add-list__window {
+    position: absolute;
+    height: 30vh;
+    width: 40vh;
+    display: none;
+    flex-flow: row wrap;
+    padding: 2vh;
+    top: 30vh;
+    left: 55vh;
+    right: auto;
+    bottom: auto;
+    margin: 0;
+    background-color: #f27a5b;
 }
 
 .add-list__cover {
-    display: flex;
-    margin: auto;
-    border: none;
-    background-color: #f27a5b;
-    color: white;
+    width: 100%;
 }
 
 .add-list__name {
-
+    width: 100%;
 }
 
 .add-list__author {
+    width: 100%;
+}
 
+.add-list__rating {
+    width: 100%;
 }
 
 .add-list__submit {
-
+    width: 100%;
 }

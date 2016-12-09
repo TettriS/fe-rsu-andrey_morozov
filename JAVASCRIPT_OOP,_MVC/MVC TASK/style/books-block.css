@@ -3,7 +3,7 @@
     flex-shrink: 0;
     width: 100%;
     overflow: auto;
-    height: 75%;
+    height: 85%;
 }
 
 .books-block__list {
@@ -36,6 +36,8 @@
 }
 
 .books-block--image {
+    height: 275px;
+    width: 200px;
     border-radius: 0.5em;
     margin-bottom: 1em;
 }
@@ -44,20 +46,11 @@
     color: #464a67;
     font-weight: 100;
     font-size: 1em;
-    text-transform: capitalize;
-    /*capitalize*/
-}
-
-.books-block--by {
-    color: #78829d;
-    font-size: inherit;
-    text-transform: lowercase;
 }
 
 .books-block--author {
     color: #78829d;
     font-size: 0.8em;
-    text-transform: capitalize;
 }
 
 .books-block--stars {
