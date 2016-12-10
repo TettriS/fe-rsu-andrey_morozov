@@ -43,17 +43,26 @@
 
 .add-list__window {
     position: absolute;
-    height: 30vh;
-    width: 40vh;
+    height: 20vh;
+    width: 30vh;
     display: none;
     flex-flow: row wrap;
-    padding: 2vh;
-    top: 30vh;
-    left: 55vh;
+    padding: 0.5vh;
+    border-radius: 1vh;
+    top: 40vh;
+    left: 80vh;
     right: auto;
     bottom: auto;
     margin: 0;
     background-color: #f27a5b;
+}
+
+.add-list__clouse {
+    position: absolute;
+    font-size: 3em;
+    top: -2vh;
+    left: 31vh;
+    color: #18a4fa;
 }
 
 .add-list__cover {
