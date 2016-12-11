@@ -24,9 +24,9 @@
     <div id = "wrapper">
         <header class="header">
             <ul class="menu-list">
-                <li class="menu-list__item"><a href="/" class="menu-list__link">help center</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">help center</a></li>
                 <li class="menu-list__item"><div class="menu-list__item-empty"></div></li>
-                <li class="menu-list__item"><a href="/" class="menu-list__link">our support</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">our support</a></li>
                 <li class="menu-list__item menu-list__last-item">
                     <button class="drop-down drop-down__button">
                         <img class="drop-down__avatar" src="style/images/profile.png" alt="avatar">
@@ -53,49 +53,56 @@
                         <input type="number" min="0" max="5"  class="add-list__rating" placeholder="Stars">
                         <input type="button" class="add-list__submit" value="Add a book">
                     </li>
+                    <li class="add-list__tag-window">
+                        <input type="button" class="add-list__most-read-title" value="Most Read Title">
+                        <input type="button" class="add-list__best-of-list" value="Best Of List">
+                        <input type="button" class="add-list__classic-novels" value="Classic Novels">
+                        <input type="button" class="add-list__non-fiction" value="Non Fiction">
+                        <input type="button" class="add-list__default" value="Default">
+                    </li>
                 </ul>
                 <ul class="navigation">
                     <li class="navigation__item">
                         <i class="fa fa-book navigation__icon"></i>
-                        <a href="/" class="navigation__link">now reading</a>
+                        <a disabled href="#" class="navigation__link">now reading</a>
                     </li>
                     <li class="navigation__item navigation__active">
                         <i class="fa fa-globe navigation__icon"></i>
-                        <a href="/" class="navigation__link">browse</a>
+                        <a disabled href="#" class="navigation__link">browse</a>
                     </li>
                     <li class="navigation__item">
                         <i class="fa fa-shopping-cart navigation__icon"></i>
-                        <a href="/" class="navigation__link">buy books</a>
+                        <a disabled href="#" class="navigation__link">buy books</a>
                     </li>
                     <li class="navigation__item">
                         <i class="fa fa-star navigation__icon"></i>
-                        <a href="/" class="navigation__link">favourite books</a>
+                        <a disabled href="#" class="navigation__link">favourite books</a>
                     </li>
                     <li class="navigation__item">
                         <i class="fa fa-th-list navigation__icon"></i>
-                        <a href="/" class="navigation__link">wishlist</a>
+                        <a disabled href="#" class="navigation__link">wishlist</a>
                     </li>
                     <li class="navigation__item">
                         <i class="fa fa-clock-o navigation__icon"></i>
-                        <a href="/" class="navigation__link">history</a>
+                        <a disabled href="#" class="navigation__link">history</a>
                     </li>
                 </ul>
                 <ul class="account-lists">
                     <li class="account-lists__item">
                         <i class="fa fa-circle account-list--icon-most account-list__icon"></i>
-                        <a href="/" class="account-lists__list">most read titles</a>
+                        <a href="#" class="account-lists__list">most read titles</a>
                     </li>
                     <li class="account-lists__item">
                         <i class="fa fa-circle account-list--icon-best account-list__icon"></i>
-                        <a href="/" class="account-lists__list">best of list</a>
+                        <a href="#" class="account-lists__list">best of list</a>
                     </li>
                     <li class="account-lists__item">
                         <i class="fa fa-circle account-list--icon-classic account-list__icon"></i>
-                        <a href="/" class="account-lists__list">classic novels</a>
+                        <a href="#" class="account-lists__list">classic novels</a>
                     </li>
                     <li class="account-lists__item">
                         <i class="fa fa-circle account-list--icon-non account-list__icon"></i>
-                        <a href="/" class="account-lists__list">non fiction</a>
+                        <a href="#" class="account-lists__list">non fiction</a>
                     </li>
                 </ul>
                 <ul class="history-list"></ul>
@@ -123,8 +130,16 @@
         </main>
         <footer class="footer">
             <ul class="footer__list">
-                <li class="footer_list__item"><a href="/" class="footer_list__link"><i class="fa fa-question-circle footer_list__icon"></i></a></li>
-                <li class="footer_list__item footer_list__item-settings"><a href="/" class="footer_list__link"><i class="fa fa-gear footer_list__icon"></i></a></li>
+                <li class="footer_list__item">
+                    <a href="#" class="footer_list__link">
+                        <i class="fa fa-question-circle footer_list__icon"></i>
+                    </a>
+                </li>
+                <li class="footer_list__item footer_list__item-settings">
+                    <a href="#" class="footer_list__link">
+                        <i class="fa fa-gear footer_list__icon"></i>
+                    </a>
+                </li>
             </ul>
         </footer>
     </div>

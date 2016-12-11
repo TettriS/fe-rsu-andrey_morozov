@@ -23,6 +23,11 @@
     color: #78829d;
 }
 
+.history-list__page-icon {
+    margin: 0 60% 0.5em 0;
+    color: #78829d;
+}
+
 .history-list__value {
     color: #575e71;
 }
@@ -34,7 +39,17 @@
 }
 
 .history-list__highlight {
+    margin: 0 0.2em;
     text-transform: capitalize;
     text-decoration: none;
     color: #78829d;
+}
+
+.history-list__block {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #30374a;
+    border-radius: 1em;
+    padding: 1em;
+    width: 10em;
 }
