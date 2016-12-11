@@ -267,7 +267,9 @@ View.prototype.createSaidNotification = function(notification) {
 View.prototype.refresh = function() {
     document.querySelector(".books-block__list").innerHTML = "";
     for (var b = this.model.books.length - 1; b >= 0; b--) {
-        this.createBook(this.model.books[b]);
+        if (this.model.books[b].tag === "") {
+            this.createBook(this.model.books[b]);
+        }
     }
 }
 
@@ -421,18 +423,19 @@ View.prototype.init = function() {
             }
         }
     });
-
+//
     document.querySelector(".add-list__most-read-title").addEventListener(
         "click", function() {
             document.querySelector(".add-list__tag-window").style.display = "none";
-            that.model.books[that.model.length - (1 + that.focusElem)].tag = "Most Read Title";
+            that.model.books[that.model.books.length - (1 + that.focusElem)].tag = "Most Read Title";
             that.model.newNotification({
                 did: "You added",
-                name: that.model.books[that.model.books - (1 + that.focusElem)].name,
-                author: that.model.books[that.model.books - (1 + that.focusElem)].author,
+                name: that.model.books[that.model.books.length - (1 + that.focusElem)].name,
+                author: that.model.books[that.model.books.length - (1 + that.focusElem)].author,
                 list: "Most Read Title",
                 time: 0
             });
+            that.refresh();
         });
 
     document.getElementsByClassName("account-lists__item")[1
@@ -448,14 +451,15 @@ View.prototype.init = function() {
     document.querySelector(".add-list__best-of-list").addEventListener(
         "click", function() {
             document.querySelector(".add-list__tag-window").style.display = "none";
-            that.model.books[that.model.length - (1 + that.focusElem)].tag = "Best Of List";
+            that.model.books[that.model.books.length - (1 + that.focusElem)].tag = "Best Of List";
             that.model.newNotification({
                 did: "You added",
-                name: that.model.books[that.model.books - (1 + that.focusElem)].name,
-                author: that.model.books[that.model.books - (1 + that.focusElem)].author,
+                name: that.model.books[that.model.books.length - (1 + that.focusElem)].name,
+                author: that.model.books[that.model.books.length - (1 + that.focusElem)].author,
                 list: "Best Of List",
                 time: 0
             });
+            that.refresh();
         });
 
     document.getElementsByClassName("account-lists__item")[2
@@ -471,14 +475,15 @@ View.prototype.init = function() {
     document.querySelector(".add-list__classic-novels").addEventListener(
         "click", function() {
             document.querySelector(".add-list__tag-window").style.display = "none";
-            that.model.books[that.model.length - (1 + that.focusElem)].tag = "Classic Novels";
+            that.model.books[that.model.books.length - (1 + that.focusElem)].tag = "Classic Novels";
             that.model.newNotification({
                 did: "You added",
-                name: that.model.books[that.model.books - (1 + that.focusElem)].name,
-                author: that.model.books[that.model.books - (1 + that.focusElem)].author,
+                name: that.model.books[that.model.books.length - (1 + that.focusElem)].name,
+                author: that.model.books[that.model.books.length - (1 + that.focusElem)].author,
                 list: "Classic Novels",
                 time: 0
             });
+            that.refresh();
         });
 
     document.getElementsByClassName("account-lists__item")[3
@@ -494,29 +499,31 @@ View.prototype.init = function() {
     document.querySelector(".add-list__non-fiction").addEventListener(
         "click", function() {
             document.querySelector(".add-list__tag-window").style.display = "none";
-            that.model.books[that.model.length - (1 + that.focusElem)].tag = "Non Fiction";
+            that.model.books[that.model.books.length - (1 + that.focusElem)].tag = "Non Fiction";
             that.model.newNotification({
                 did: "You added",
-                name: that.model.books[that.model.books - (1 + that.focusElem)].name,
-                author: that.model.books[that.model.books - (1 + that.focusElem)].author,
+                name: that.model.books[that.model.books.length - (1 + that.focusElem)].name,
+                author: that.model.books[that.model.books.length - (1 + that.focusElem)].author,
                 list: "Non Fiction",
                 time: 0
             });
+            that.refresh();
         });
 
     document.querySelector(".add-list__default").addEventListener(
         "click", function() {
             document.querySelector(".add-list__tag-window").style.display = "none";
-            that.model.books[that.model.length - (1 + that.focusElem)].tag = "";
+            that.model.books[that.model.books.length - (1 + that.focusElem)].tag = "";
             that.model.newNotification({
                 did: "You added",
-                name: that.model.books[that.model.books - (1 + that.focusElem)].name,
-                author: that.model.books[that.model.books - (1 + that.focusElem)].author,
+                name: that.model.books[that.model.books.length - (1 + that.focusElem)].name,
+                author: that.model.books[that.model.books.length - (1 + that.focusElem)].author,
                 list: "default",
                 time: 0
             });
+            that.refresh();
         });
-
+//
     that.model.onAddBook.subscribe(that.refresh.bind(that));
     that.model.onNewNotification.subscribe(that.refreshNotify.bind(that));
 }
