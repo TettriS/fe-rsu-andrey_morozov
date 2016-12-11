@@ -156,15 +156,6 @@ Model.prototype.addBook = function(book) {
     this.onAddBook.notify(this.books);
 }
 
-// Model.prototype.delBook = function(book) {
-//     for ( var i = 0; i < this.books.length; i++ ) {
-//         if (this.books.indexOf(book) >= 0) {
-//             this.books.splice(i, 1);
-//         }
-//     }
-//     this.onDelBook.notify(this.books);
-// }//
-
 Model.prototype.NewNotification = function(notification) {
     this.notifications.push(notification);
     this.onNewNotification.notify(this.notifications);

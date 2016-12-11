@@ -1,9 +1,6 @@
 function View(model, controller) {
     this.model = model;
     this.ctrl = controller;
-    
-    // this.counterElement = document.getElementById('counter');
-    this.search = document.querySelector(".filter__input");
     this.addAButton = document.querySelector(".add-list__button");
     this.addInput = document.querySelector(".add-list__submit");
     this.addClouse = document.querySelector(".add-list__clouse");
@@ -70,6 +67,26 @@ View.prototype.createBook = function(book) {
 
         for (var i = 0; i < 5; i++) {
             var bookRating = document.createElement("i");
+            bookRating.addEventListener("click", function() {
+    for ( var i = 0; i < document.getElementsByClassName("books-block--stars").length; i++ ) {
+        for ( var z = 0; z < 5; z++ ) {
+            if (this === document.getElementsByClassName("books-block--stars")[i
+            ].getElementsByClassName("fa")[z]) {
+                for (var g = 0; g < 5; g++) {
+                    if (g <= z) { 
+                        document.getElementsByClassName("books-block--stars")[i
+                        ].getElementsByClassName("fa")[g
+                        ].className = "fa fa-star";
+                    } else {
+                        document.getElementsByClassName("books-block--stars")[i
+                        ].getElementsByClassName("fa")[g
+                        ].className = "fa fa-star-o";
+                    }
+                }
+            }
+        }
+    }
+            });
             if (i < book.rating) { 
                 bookRating.className = "fa fa-star";
             } else {
@@ -177,11 +194,15 @@ View.prototype.init = function() {
         document.querySelector(".add-list__window").style.display = "none";
     });
 
+    that.addInput.addEventListener("click", function() {
+        document.querySelector(".add-list__window").style.display = "none";
+        that.newBook();
+    });
+
     document.querySelector(".filter__input").addEventListener("keyup", function() {
         var value = document.querySelector(".filter__input").value.toLowerCase();
-        for (var i = 0;
-        i < document.querySelectorAll(".books-block__item").length - 16;
-        i++) {
+        for (
+        var i = 0; i < document.querySelectorAll(".books-block__item").length - 16; i++) {
             if (that.model.books[that.model.books.length - (1 + i)
             ].name.toLowerCase().indexOf(value) < 0) {
                 document.querySelectorAll(".books-block__item")[i].style.display = "none";
@@ -199,12 +220,38 @@ View.prototype.init = function() {
         }
     });
 
-    that.addInput.addEventListener("click", function() {
-        document.querySelector(".add-list__window").style.display = "none";
-        that.newBook();
-    });
+    document.getElementsByClassName("filter__button")[0].addEventListener("click", function() {
+        for (
+        var z = 0; z < document.getElementsByClassName("filter__button").length - 1; z++ ) {
+        document.getElementsByClassName("filter__button")[z].className = "filter__button";
+        }
+        this.className = "filter__button filter--select";
+        for (
+        var i = 0; i < document.querySelectorAll(".books-block__item").length - 16; i++) {
+            if (that.model.books[that.model.books.length - (1 + i)
+            ].rating >= 0) {
+                document.querySelectorAll(".books-block__item")[i].style.display = "flex";
+            }
+        }
+    })
+
+    document.getElementsByClassName("filter__button")[2].addEventListener("click", function() {
+        for (
+        var z = 0; z < document.getElementsByClassName("filter__button").length - 1; z++ ) {
+        document.getElementsByClassName("filter__button")[z].className = "filter__button";
+        }
+        this.className = "filter__button filter--select";
+        for (
+        var i = 0; i < document.querySelectorAll(".books-block__item").length - 16; i++) {
+            if (document.querySelectorAll(".books-block__item")[i
+            ].getElementsByClassName("fa")[4].matches(".fa-star")) {
+                document.querySelectorAll(".books-block__item")[i].style.display = "flex";
+            } else {
+                document.querySelectorAll(".books-block__item")[i].style.display = "none";
+            }
+        }
+    })
 
     that.model.onAddBook.subscribe(that.refresh.bind(that));
     that.model.onNewNotification.subscribe(that.refreshNotify.bind(that));
-    // model.onDelBook.subscribe();
 }
