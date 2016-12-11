@@ -111,20 +111,39 @@ function Model() {
     ];
     this.notifications = [
         {
-            did: "You added",
-            name: "",
+            did: "You were searching",
+            name: "Cook",
             author: "",
             list: "",
-            time: ""
+            time: 0
         },
         {
             did: "You use filter",
-            name: "",
-            time: ""
+            name: "All Books",
+            author: "",
+            list: "",
+            time: 0
         },
         {
-            did: "You use search",
-            time: ""
+            did: "You change rating",
+            name: "",
+            author: "",
+            list: "",
+            time: 0
+        },
+        {
+            did: "You added",
+            name: "fight club",
+            author: "chuck palahniuk",
+            list: "must read titles",
+            time: 0
+        },
+        {
+            did: "You added",
+            name: "the trial",
+            author: "franz kafka",
+            list: "must read titles",
+            time: 0
         }
     ];
     this.onAddBook = new Event();
@@ -134,7 +153,7 @@ function Model() {
 
 Model.prototype.addBook = function(book) {
     this.books.push(book);
-    // this.onAddBook.notify(this.books);
+    this.onAddBook.notify(this.books);
 }
 
 // Model.prototype.delBook = function(book) {
@@ -146,7 +165,7 @@ Model.prototype.addBook = function(book) {
 //     this.onDelBook.notify(this.books);
 // }//
 
-// Model.prototype.NewNotification = function(notification) {
-//     this.notifications.push(notification);
-//     this.onDelBook.notify(this.notifications);
-// }
+Model.prototype.NewNotification = function(notification) {
+    this.notifications.push(notification);
+    this.onNewNotification.notify(this.notifications);
+}
