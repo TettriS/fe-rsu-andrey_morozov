@@ -12,7 +12,7 @@ function View(model, controller) {
 View.prototype.newBook = function() {
     var book = {};
     book.coverAddress = document.querySelector(".add-list__cover").value;
-    book.name = document.querySelector(".add-list__name").value;
+    book.name = "by " + document.querySelector(".add-list__name").value;
     book.author = document.querySelector(".add-list__author").value;
     book.rating = document.querySelector(".add-list__rating").value;
     this.model.addBook(book);
@@ -177,12 +177,24 @@ View.prototype.init = function() {
         document.querySelector(".add-list__window").style.display = "none";
     });
 
-    document.querySelector(".filter__input").addEventListener("change", function() {
-        for (var i = 0; i < 
-        document.querySelectorAll(".books-block__item").length - 16; ) {
-            if (document.querySelector(".filter__input").value.toLowerCase() !== 
-            model.books[i].name.toLowerCase()) {
-
+    document.querySelector(".filter__input").addEventListener("keyup", function() {
+        var value = document.querySelector(".filter__input").value.toLowerCase();
+        for (var i = 0;
+        i < document.querySelectorAll(".books-block__item").length - 16;
+        i++) {
+            if (that.model.books[that.model.books.length - (1 + i)
+            ].name.toLowerCase().indexOf(value) < 0) {
+                document.querySelectorAll(".books-block__item")[i].style.display = "none";
+            } else if (that.model.books[that.model.books.length - (1 + i)
+            ].name.toLowerCase().indexOf(value) >= 0) {
+                document.querySelectorAll(".books-block__item")[i].style.display = "flex";
+            }
+            if (that.model.books[that.model.books.length - (1 + i)
+            ].author.toLowerCase().indexOf(value) < 0) {
+                document.querySelectorAll(".books-block__item")[i].style.display = "none";
+            } else if (that.model.books[that.model.books.length - (1 + i)
+            ].author.toLowerCase().indexOf(value) >= 0) {
+                document.querySelectorAll(".books-block__item")[i].style.display = "flex";
             }
         }
     });
@@ -193,6 +205,6 @@ View.prototype.init = function() {
     });
 
     that.model.onAddBook.subscribe(that.refresh.bind(that));
-    // model.onDelBook.subscribe();
     that.model.onNewNotification.subscribe(that.refreshNotify.bind(that));
+    // model.onDelBook.subscribe();
 }

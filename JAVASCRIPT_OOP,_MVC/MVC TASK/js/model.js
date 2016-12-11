@@ -1,52 +1,52 @@
 function Model() {
     this.books = [
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
-            name: 'Empty'
+            name: "Empty"
         },
         {
             coverAddress : "style/images/10.png",
