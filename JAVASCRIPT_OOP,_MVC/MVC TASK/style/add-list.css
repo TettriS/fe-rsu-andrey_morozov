@@ -63,7 +63,7 @@
     padding: 0.5vh;
     border-radius: 1vh;
     top: 40vh;
-    left: 80vh;
+    left: 60vh;
     right: auto;
     bottom: auto;
     margin: 0;
@@ -71,6 +71,14 @@
 }
 
 .add-list__clouse {
+    position: absolute;
+    font-size: 3em;
+    top: -2vh;
+    left: 31vh;
+    color: #18a4fa;
+}
+
+.add-list__tag-clouse {
     position: absolute;
     font-size: 3em;
     top: -2vh;
@@ -99,21 +107,31 @@
 }
 
 .add-list__most-read-title {
-    width: 100%;
+    width: 33%;
 }
 
 .add-list__best-of-list {
-    width: 100%;
+    width: 33%;
 }
 
 .add-list__classic-novels {
-    width: 100%;
+    width: 33%;
 }
 
 .add-list__non-fiction {
-    width: 100%;
+    width: 33%;
 }
 
 .add-list__default {
-    width: 100%;
+    width: 33%;
+}
+
+.add-list__text-for-new {
+    padding: 0 0 0.5em 0;
+    width: 64.5%;
+}
+
+.add-list__submit-for-new {
+    padding: 0 0 0.5em 0;
+    width: 33.2%;
 }

@@ -183,42 +183,7 @@ function Model() {
         },
         {
             name: "Empty"
-        }//,
-        // {
-        //     did: "You were searching",
-        //     name: "Cook",
-        //     author: "",
-        //     list: "",
-        //     time: 0
-        // },
-        // {
-        //     did: "You use filter",
-        //     name: "All Books",
-        //     author: "",
-        //     list: "",
-        //     time: 0
-        // },
-        // {
-        //     did: "You changed rating",
-        //     name: "",
-        //     author: "",
-        //     list: "",
-        //     time: 0
-        // },
-        // {
-        //     did: "You added",
-        //     name: "fight club",
-        //     author: "chuck palahniuk",
-        //     list: "must read titles",
-        //     time: 0
-        // },
-        // {
-        //     did: "You added",
-        //     name: "the trial",
-        //     author: "franz kafka",
-        //     list: "must read titles",
-        //     time: 0
-        // }
+        }
     ];
     this.onAddBook = new Event();
     this.onDelBook = new Event();

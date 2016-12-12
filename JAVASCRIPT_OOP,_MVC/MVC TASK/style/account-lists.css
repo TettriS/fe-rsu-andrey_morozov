@@ -18,12 +18,13 @@
     justify-content: flex-start;
     height: 2.5em;
     padding: 0.2em 0;
+    color: #78829d;
 }
 
 .account-lists__list {
     text-transform: capitalize;
     text-decoration: none;
-    color: #78829d;
+    color: inherit;
 }
 
 .account-list__icon {
@@ -45,4 +46,13 @@
 
 .account-list--icon-non {
     color: #7973d0;
+}
+
+.account-list--icon-new {
+    color: limegreen;
+}
+
+.account-list__select {
+    color: white;
+    background-color: #18a4fa;
 }
